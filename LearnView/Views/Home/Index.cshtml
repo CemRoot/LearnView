@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Css
+    {
+    @*View içinde Css dosyasını eklemek içinde şu şekilde yapmaktayız.*@
+    <link rel="stylesheet" href="~/css/example.css" asp-append-version="true" />
+
+    @*View içinde CSS yazmak ve bunu siteye postlamak*@
+    <style>
+        h1{
+            color:red;
+            background-color:blue;
+        }
+    </style>
+}
+
+
+@*View içinde JS yazmak ve bunu siteye postalamak*@
+@section Scripts
+{
+    <script type="text/javascript">
+        //alert("Sayfamıza Hoşgeldiniz")
+            $(document).ready(function(){
+                console.log("Sayfamıza Hoşgeldin!");
+            })
+        </script>
+
+}
+
+<h1>Bu ana Dosyadan yazdığımız koddan gelmiştir.</h1>
+
+<hr />
+<h2>Buda Css Dosyasından çekilen css'dir</h2>
+
+<partial name="_MenupartialView"/>
